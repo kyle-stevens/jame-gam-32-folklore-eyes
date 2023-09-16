@@ -9,6 +9,7 @@ var is_crouching : bool = false
 # WEAPONS
 var has_spear : bool = false
 var has_sword : bool = false
+var sword = load("res://lugh-assets/sword_attack.tscn")
 var has_sling : bool = false
 var has_hound : bool = false
 var has_horse : bool = false
@@ -52,6 +53,7 @@ func _mouse_process(delta):
 func _sword_attack():
 	if not has_sword:
 		return
+	self.add_child(sword.instantiate())
 
 func _spear_attack():
 	if not has_spear:
@@ -70,7 +72,9 @@ func _hound_dash():
 		return
 
 func _inputs_process(delta):
-	pass
+	if Input.is_action_just_pressed("ui_end"):
+		has_sword = true
+		_sword_attack()
 
 func _process(delta):
 	_movement_process(delta)
