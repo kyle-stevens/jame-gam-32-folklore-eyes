@@ -1,0 +1,14 @@
+[gd_resource type="SpriteFrames" load_steps=2 format=3 uid="uid://bcbuj15ppg2yq"]
+
+[ext_resource type="Texture2D" uid="uid://cpa6xjo66sju2" path="res://lugh-assets/rough-lugh-sprite.png" id="1_i17xj"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_i17xj")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]

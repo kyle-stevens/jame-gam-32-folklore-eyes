@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://bw3iqgecbubmv"]
+
+[ext_resource type="Script" path="res://lugh-assets/lugh.gd" id="1_k0q8i"]
+[ext_resource type="SpriteFrames" uid="uid://bcbuj15ppg2yq" path="res://lugh-assets/lugh-sprite-frames.tres" id="1_xexpv"]
+[ext_resource type="Texture2D" uid="uid://c5epe01kiwcgu" path="res://icon.svg" id="3_0miy8"]
+[ext_resource type="Shape2D" uid="uid://hkmb3y3i4mes" path="res://lugh-assets/crouching_collision.tres" id="3_hgei2"]
+
+[node name="lugh" type="CharacterBody2D"]
+script = ExtResource("1_k0q8i")
+
+[node name="lugh-sprite" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("1_xexpv")
+
+[node name="lugh-collision" type="CollisionShape2D" parent="."]
+shape = ExtResource("3_hgei2")
+
+[node name="mouse-reticle" type="Sprite2D" parent="."]
+texture = ExtResource("3_0miy8")
